@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Mr.SH4D0W</title>
+ <meta charset="UTF-8">
+ <meta name="Author" content="..::YOUR WEBSITE HAS BEEN HACKED::.."/>
+ <meta name="copyright" content="|I<3U|"/>
+ <meta name="description" content="Tersakiti"/>
+ <link href='http://fonts.googleapis.com/css?family=Iceland:400,700' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Iceland:400,700' rel='stylesheet' type='text/css'>
+ <meta property="og:image" content="">
+  <style type="text/css">
+   body {
+    overflow:hidden;
+    background-image:url('http://www.drodd.com/images16/black-picture8.jpg');
+    background-color: #000000;
+    background-repeat:no-repeat;
+    background-size: 100% ;
+    background-position:top center;
+    margin: 0px;
+    cursor:none;
+    font-family: Iceland, sans-serif;
+   }
+   a{
+    text-decoration: none;
+   }
+   h1{
+   font-family: Iceland, sans-serif;
+   font-size:90px;
+   color:#fff;
+   margin:0px 0px 0px;    }
+   h2{
+   font-family: Iceland, sans-serif;
+   Aaaaaze:40px;
+   color:#000;
+   margin: 0px;
+   text-shadow: 0 0 3px #fff;    }
+   p{
+   color:#fff;
+   font-size:25px;
+   margin: 0px;
+   text-shadow: 0 0 3px #ff0099;
+   }
+   .fot{
+   font-family: Iceland, sans-serif;
+   font-size:14px;
+   color:#fff;
+   margin: 0px;
+   text-shadow: 0 0 3px #000, 0px 0px 5px #000;
+   }
+    h1{
+   color:#000;
+   text-shadow: 0 0 5px #fff;
+  }
+  .greets{
+ font-family: Arial, sans-serif;
+ line-height: 24px;
+ font-size: 11px;
+ width: 50%;
+ background: #000;
+ opacity: 0.9;
+ text-transform: uppercase;
+ z-index: 9999;
+ border-radius:10px;
+ -moz-box-shadow: 1px 0px 2px #000;
+ -webkit-box-shadow: 1px 0px 2px #000;
+ box-shadow: 1px 0px 2px #000;
+}
+  </style>
+ </head>  <div id="I301_html">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript">setTimeout("$('#loading').fadeOut(5000);", 10000);  </script>
+<style type="text/css">#loading{position:fixed;top:0;left:0;padding-top:0px;background-color:#000;width:100%;height:100%;color:black;z-index:9000;overflow:hidden;}</style> <div id="loading">
+<body onload="document.f.p.focus()" topmargin="0" leftmargin="0" bgcolor="#000000" marginheight="0" marginwidth="0">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr>
+</tr> <tr>
+</tr>
+</tbody></table> <font id="ResponseData" color="#ff99cc">
+<pre><script type="text/javascript">
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true; // Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar =0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval); // We haven't finished loading yet.  Have patience.
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+ this.currentText = "";
+ this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script>
+<script>
+function disableselect(e){return false}
+function reEnable(){return true}
+//if IE4+
+document.onselectstart=new Function ("return false")
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+<script>
+var message="Aaaaa";
+function clickIE()
+{if (document.all)
+{(message);return false;}}
+function clickNS(e) {
+if
+(document.layers||(document.getElementById&&!document.all))
+{
+if (e.which==2||e.which==3) {(message);return false;}}}
+if (document.layers)
+{document.captureEvents(Event.MOUSEDOWN);document. onmousedown=clickNS;}
+else
+{document.onmouseup=clickNS;document.oncontextmenu  =clickIE;}
+document.oncontextmenu=new Function("return false")
+</script>
+<table style=" background-repeat: no-repeat;"  align="right" border="0" width="100%" >
+<br>
+<tbody><tr>
+<td  valign="top"><p id="hack" >
+<br>
+<br>
+<font style="color:#ffffff;text-shadow:#FF0099 0px 0px 10px"> &nbsp;&nbsp;&nbsp;&nbsp;<b>[+] <font style="color:red;text-shadow:#000 0px 0px 3px">script deface By </font><font style="color:white;text-shadow:#000 0px 0px 3px">_MR.SH4DOW</font>        </font> <br><br>
+<font style="color:#ffffff;text-shadow:#FF0099 0px 0px 10px"> &nbsp;&nbsp;&nbsp;&nbsp;<b>[+] I am tired of all this :(         </font> <br>
+<font style="color:#ffffff;text-shadow:#FF0099 0px 0px 10px"> &nbsp;&nbsp;&nbsp;&nbsp;<b>[+] I'm Tired With Your Attitude That Never Change :(     </font><br>
+<font style="color:#ffffff;text-shadow:#FF0099 0px 0px 10px"> &nbsp;&nbsp;&nbsp;&nbsp;<b>[+] I hope you understand with my feelings :(       </font><br>
+      <font color="White"> </p></tr>
+</tbody></table>              </div> <br>
+<script type="text/javascript">
+    new TypingText(document.getElementById("hack"), 50, function(i) { var ar = new Array("_",""); return " " + ar[i.length % ar.length]; });
+    TypingText.runAll();
+    </script>
+    <style>       td       {         background-color: #000000;         font-family: Courier New;         font-size:20px;         color:#000000;         border-color: #000000;         border-width:1pt;         border-style:solid;         border-collapse:collapse;         padding:0pt 3pt;         vertical-align:top;       }       table       {         border-color: #88aace;         border-width:0pt 1pt;         border-style:dash;       }       A:Link, A:Visited       {         color: #88aace;       }       A.no:Link, A.no:Visited       {         color: #88aace;         text-decoration: none;       }       A:Hover, A:Visited:Hover , A.no:Hover, A.no:Visited:Hover       {         color: #88aace;         background-color:#2e2e2e;         text-decoration:         overline underline;       }       .style1       {         color: #88aace       }       .style2       {         color: 1f1f1f       }       body       {         color:white;         background-position:right;         background-attachment:fixed;         </div>       }     </style> </div>
+</div>
+<body oncontextmenu="return false" onkeydown="return false">
+<center><BR><BR><BR><br><br><br><br>
+<h2 class="glow"><font style="color:green;text-shadow:#000 0px 0px 3px"></font><font style="color:red;text-shadow:#000 0px 0px 3px">YOUR HEART</font><font style="color:white;text-shadow:#000 0px 0px 3px"> DEFACED BY</font>
+<font style="color:green;text-shadow:#000 0px 0px 3px"></font></h2>
+<h2 class="glow2" ><font style="color:yellow;text-shadow:#12 0px 0px 32px">.::Mr.SH4D0W::.</font><br> <span style="color:orange;font-family:Iceland;text-shadow:white 0px 0px 10px">^_^</span><span style="color:#ffffff;font-family:Iceland;text-shadow:#FF0099 0px 0px 10px">Mr.SH4D0W</span><span style="color:orange;font-family:Iceland;text-shadow:white 0px 0px 10px">^_^</span> </b></h2>
+<p><b><font style="color:green;text-shadow:#000 0px 0px 3px">Sorry, I Was On Your Heart.</font><span style="font-family:Iceland;color:red;text-shadow:#000 0px 0px 3px"></span>
+   <font style="color:green;text-shadow:#000 0px 0px 3px">PLEASE </font><font style="color:red;text-shadow:#000 0px 0px 3px">CHECK AND PATCH</font>
+   <font style="color:green;text-shadow:#000 0px 0px 3px"> YOUR HEART !</font><br><font style="color:yellow;text-shadow:#000 0px 0px 3px">#*#*#*#</font>
+      </p>
+  </span>
+   <div style="font-size:10px;color:gold;text-shadow:grey 0px 0px 3px">
+  <span style="font-family:Iceland;font-weight:bold;color:#ffffff"><p><font style="color:blue;text-shadow:#000 0px 0px 3px">~I AM IS JUST AN ILLUSION~</font></p></span>
+ </div> <div class="greets">
+<table align=center border="0">
+<tr>
+<td width=100% id=greetz>
+<marquee behavior="scroll" direction="right" scrollamount="25" scrolldelay="25" width="100%">
+<font size="5px" style="font-family: Iceland, sans-serif;color:white;text-shadow: 0 0 3px red, 0px 0px 5px red" >
+<b>-=all Defacer Indonesia=-</font>
+</marquee>
+</td>
+</table></div> </center>
+</body>
