@@ -1,0 +1,118 @@
+<!-- End of Topbar -->
+
+               <!-- Begin Page Content -->
+               <div class="container-fluid">
+
+                   <!-- Page Heading -->
+                   <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                       <h1 class="h3 mb-0 text-gray-800">Bot Nulis</h1>
+                   </div>
+                       <h2>Bot Nulis Adalah Tools Yang Berfungsi Untuk Membantu Anda Menulis Tugas Ketika Anda Sedang Malas</h2>
+              
+                   </p>
+    
+                   <img src="images/Iyan.jpg" class="img-responsive" alt="">
+    
+                   <br>
+    
+                   <div class="tile">
+                        <div class="tile-body" id="iyan">
+                        </div>
+                        </div>
+                        <div class="tile">
+                        <div class="tile-body">
+                        <br>
+                        <textarea id='iyan1' class="form-control" placeholder="Masukan Text Yang Ingin Di Tulis !" rows="5"></textarea>
+                        </div>
+                        </div>		
+                        <div class="tile">
+                        <div class="row">
+                        </div>
+                        <div class="col">
+                        <input type='button' onclick="buat()"  value="TULIS" id='button' class="btn btn-danger btn-block">
+                        </div>
+                        </div>
+                        </div>
+                        
+                        <script>
+                                function buat() {
+                                    var xhr = new XMLHttpRequest();
+                                    var gans = encodeURIComponent(document.getElementById("iyan1").value);
+                                    var url = "https://tools.zone-xsec.com/api/nulis.php?q="+gans;
+                        
+                                    xhr.onloadstart = function () {
+                                        document.getElementById("button").innerHTML = "Loading...";
+                                    }
+                        
+                                    xhr.onerror = function () {
+                                        alert("Gagal mengambil data");
+                                    };
+                        
+                                    xhr.onloadend = function () {
+                                        if (this.responseText !== "") {
+                                            //alert(encodeURIComponent(gans));
+                                            var data = JSON.parse(this.responseText);
+                                            var img = document.createElement("img");
+                                      img.setAttribute("width", "304");
+                                            img.src = data.image;
+                                            var name = document.createElement("h3");
+                                            name.innerHTML = data.status;
+                                          if (data.status == 'Error'){
+                                             alert('Error');
+                                             alert('Harap masukan input dengan benar!');
+                                          }else{
+                                            document.getElementById("iyan").append(img);
+                        
+                                            setTimeout(function () {
+                                                document.getElementById("button").innerHTML = "Buat Lagi";
+                                            }, 3000);
+                                          }
+                                        }
+                                    };
+                                    xhr.open("GET", url, true);
+                                    xhr.send();
+                                }
+                        
+                                function clearResult() {
+                                    document.getElementById("iyan").innerHTML = "";
+                                }
+                        </script>
+                   </div>
+              </div>                        </div>
+
+                   </div>
+
+               </div>
+               <!-- /.container-fluid -->
+
+           </div>
+           <!-- End of Main Content -->
+
+           <!-- Footer -->
+           <footer class="sticky-footer bg-white">
+               <div class="container my-auto">
+                   <div class="copyright text-center my-auto">
+                       <span>Developer &copy; k1-l3-r Kine Freedom xploit</span>
+                   </div>
+               </div>
+           </footer>
+           <!-- End of Footer -->
+
+       </div>
+       <!-- End of Content Wrapper -->
+
+   </div>
+   <!-- End of Page Wrapper -->
+   <!-- Bootstrap core JavaScript-->
+   <script src="vendor/jquery/jquery.min.js"></script>
+   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+   <!-- Core plugin JavaScript-->
+   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+   <!-- Custom scripts for all pages-->
+   <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>

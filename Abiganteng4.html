@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700");
+body {
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 100px;
+}
+.test {
+  -webkit-animation: squiggly-anim 0.34s linear infinite;
+          animation: squiggly-anim 0.34s linear infinite;
+}
+body {
+  line-height: 100vh;
+  background: #111;
+  color: #fff;
+}
+.test {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  outline: none;
+  text-align: center;
+  line-height: 1;
+}
+.small {
+  font-size: 0.5em;
+}
+.smaller {
+  font-size: 0.4em;
+}
+p {
+  margin: 0;
+}
+@-webkit-keyframes squiggly-anim {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+            filter: url("#squiggly-0");
+  }
+  25% {
+    -webkit-filter: url("#squiggly-1");
+            filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+            filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+            filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+            filter: url("#squiggly-4");
+  }
+}
+@keyframes squiggly-anim {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+            filter: url("#squiggly-0");
+  }
+  25% {
+    -webkit-filter: url("#squiggly-1");
+            filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+            filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+            filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+            filter: url("#squiggly-4");
+  }
+}
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <title>AbiGans</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="test" contenteditable>
+  Hacked? by AbiGans
+  <p class="small">– HALO MEK SAYA SIAPA? – <p/>
+  Jika Pekok Ku Udah muncul Otak pintar mu bisa apa-_-
+  <p class="small">[+] DENGAN SEDIKIT PEKOK AKU BISA BEGINI [+]</p>
+  <p class="smaller">(YOUR PELI IS NGACENGAN)</p>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+
+    
+    <filter id="squiggly-0">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0"/>
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
+    </filter>
+    <filter id="squiggly-1">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+    </filter>
+    
+    <filter id="squiggly-2">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+    </filter>
+    <filter id="squiggly-3">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+    </filter>
+    
+    <filter id="squiggly-4">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+    </filter>
+  </defs> 
+</svg>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+</body>
+
+</html>
